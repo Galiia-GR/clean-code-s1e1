@@ -16,8 +16,8 @@
       <section class="section__task-add">
         <label class="task-add__header" for="new-task">Add Item</label>
         <div class="task-add-container">
-          <input id="new-task" class="task-add-container__input" type="text">
-          <button class="button-task__add button">Add</button>
+          <input id="new-task" class="task-add-container__input task" type="text">
+          <button class="button-task__add">Add</button>
         </div>
       </section>
       <section class="section__task-todo">
@@ -25,19 +25,19 @@
         <ul id="task-todo" class="task-todo__list">
           <li class="task-todo-item item">
             <input class="task-todo-item__input" type="checkbox">
-            <label class="task-todo__header">Pay Bills</label>
-            <input class="task-todo-container__input input" type="text">
-            <button class="task-todo-buton__edit button">Edit</button>
-            <button class="task-todo-buton__delete button">
+            <label class="task-todo-item__header">Pay Bills</label>
+            <input class="task-todo-container__input task" type="text">
+            <button class="task-todo-buton__edit button edit">Edit</button>
+            <button class="task-todo-buton__delete button delete">
               <img class="button__img" src="./remove.svg" alt="ico_delete">
             </button>
           </li>
           <li class="task-todo-item edit-mode item">
             <input class="task-todo-item__input" type="checkbox">
-            <label class="task-todo__header">Go Shopping</label>
-            <input class="task-todo-container__input input" type="text" value="go shopping">
-            <button class="task-todo-buton__edit button">Save</button>
-            <button class="task-todo-buton__delete button">
+            <label class="task-todo-item__header">Go Shopping</label>
+            <input class="task-todo-container__input task" type="text" value="go shopping">
+            <button class="task-todo-buton__edit edit">Save</button>
+            <button class="task-todo-buton__delete delele">
               <img class="button__img" src="./remove.svg" alt="ico_delete">
             </button>
           </li>
@@ -47,11 +47,11 @@
         <h3 class="task-close__header">Completed</h3>
         <ul id="completed-tasks" class="task-close__list">
           <li class="task-close-item item">
-            <input class="task-todo-item__input" type="checkbox" checked>
-            <label class="task-close__header">See the Doctor</label>
-            <input class="task-close-container__input input" type="text">
-            <button class="task-close-buton__edit button">Edit</button>
-            <button class="task-close-buton__delete button">
+            <input class="task-close-item__input" type="checkbox" checked>
+            <label class="task-close-item__header">See the Doctor</label>
+            <input class="task-close-container__input task" type="text">
+            <button class="task-close-buton__edit edit">Edit</button>
+            <button class="task-close-buton__delete delete">
               <img class="button__img" src="./remove.svg" alt="ico_delete">
             </button>
           </li>
