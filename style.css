@@ -35,7 +35,6 @@
     margin: 0 auto 0;
   }
 
-  .task-todo__header,
   .input {
     width: 56%;
     display: inline-block;
@@ -46,6 +45,7 @@
     display: flex;
     justify-content: space-between;
   }
+
 
   /* сброс дефолтных настроек по правилу 3.4 "Теговые селектор"- можно не убирать */
 
@@ -117,7 +117,9 @@
 
   /* New Task */
 
-  .task-add__header {
+  .task-add__header,
+  .task-todo__header,
+  .task-close__header {
     display: block;
     margin: 0 0 20px;
   }
