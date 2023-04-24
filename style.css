@@ -139,10 +139,6 @@
     align-items: center;
   }
 
-  .task-todo-item > * {
-    vertical-align: middle;
-  }
-
   .task-todo-item__input {
     margin: 0 10px;
   }
