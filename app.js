@@ -8,53 +8,58 @@
 
 // Event handling, user interaction is what starts the code execution.
 
-var taskInput=document.getElementById("new-task");//Add a new task.
-var addButton=document.getElementsByTagName("button")[0];//first button
-var incompleteTaskHolder=document.getElementById("incompleteTasks");//ul of #incompleteTasks
-var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
+const taskInput=document.querySelector(".task-add-container__input");//Add a new task.
+const addButton=document.querySelector(".button-task__add");//first button
+const incompleteTaskHolder=document.querySelector(".task-todo__list");//ul of #incompleteTasks
+const completedTasksHolder=document.querySelector(".task-close__list");//completed-tasks
 
 
 //New task list item
-var createNewTaskElement=function(taskString){
+const createNewTaskElement=function(taskString){
 
-    var listItem=document.createElement("li");
+  const listItem=document.createElement("li");
 
-    //input (checkbox)
-    var checkBox=document.createElement("input");//checkbx
-    //label
-    var label=document.createElement("label");//label
-    //input (text)
-    var editInput=document.createElement("input");//text
-    //button.edit
-    var editButton=document.createElement("button");//edit button
+  //input (checkbox)
+  const checkBox=document.createElement("input");//checkbx
+  //label
+  const label=document.createElement("label");//label
+  //input (text)
+  const editInput=document.createElement("input");//text
+  //button.edit
+  const editButton=document.createElement("button");//edit button
 
-    //button.delete
-    var deleteButton=document.createElement("button");//delete button
-    var deleteButtonImg=document.createElement("img");//delete button image
+  //button.delete
+  const deleteButton=document.createElement("button");//delete button
+  const deleteButtonImg=document.createElement("img");//delete button image
 
-    label.innerText=taskString;
-    label.className="task";
+  listItem.className="task-todo-item item";
 
-    //Each elements, needs appending
-    checkBox.type="checkbox";
-    editInput.type="text";
-    editInput.className="task";
+  label.innerText=taskString;
+  label.className="task-todo-item__header";
 
-    editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="edit";
+  //Each elements, needs appending
+  checkBox.type="checkbox";
+  checkBox.className="task-todo-item__input";
 
-    deleteButton.className="delete";
-    deleteButtonImg.src="./remove.svg";
-    deleteButton.appendChild(deleteButtonImg);
+  editInput.type="text";
+  editInput.className="task-todo-container__input task";
+
+  editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
+  editButton.className="task-todo-buton__edit edit";
+
+  deleteButton.className="task-todo-buton__delete delete";
+  deleteButtonImg.src="./remove.svg";
+  deleteButtonImg.className="button__img";
+  deleteButton.appendChild(deleteButtonImg);
 
 
-    //and appending.
-    listItem.appendChild(checkBox);
-    listItem.appendChild(label);
-    listItem.appendChild(editInput);
-    listItem.appendChild(editButton);
-    listItem.appendChild(deleteButton);
-    return listItem;
+  //and appending.
+  listItem.appendChild(checkBox);
+  listItem.appendChild(label);
+  listItem.appendChild(editInput);
+  listItem.appendChild(editButton);
+  listItem.appendChild(deleteButton);
+  return listItem;
 }
 
 
