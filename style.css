@@ -183,6 +183,6 @@
     width: 224px;
   }
 
-  .edit-mode label {
+  .edit-mode .task-todo-item__header{
     display: none;
   }
