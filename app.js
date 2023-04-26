@@ -50,6 +50,7 @@
     deleteButton.className="task-todo-buton__delete delete";
     deleteButtonImg.src="./remove.svg";
     deleteButtonImg.className="button__img";
+    deleteButtonImg.alt="ico delete"
     deleteButton.appendChild(deleteButtonImg);
 
 
